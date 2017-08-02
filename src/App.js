@@ -42,9 +42,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src={this.state.imgUrl} alt="头像" />
-        <input type="file" onChange={this.handleChange}
-          className="file-upload-input" />
+        <label style={{ 'backgroundImage' : `url(${this.state.imgUrl})`}}
+
+          className="upload-label">
+          <input type="file" onChange={this.handleChange}
+            className="file-upload-input" />
+        </label>
       </div>
     );
   }
